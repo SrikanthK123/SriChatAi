@@ -1,0 +1,217 @@
+.GeneratedBtn {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #118a7e, #3baea0, #118a7e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+.GeneratedBtn svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.GeneratedBtn span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.GeneratedBtn:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+.GeneratedBtn:hover span {
+  transform: translateX(7px);
+}
+/* App.css */
+
+/* Normalize scrollbar styles */
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* Optional: If you want to handle scrollbar behavior in WebKit browsers */
+/* This is not necessary if you're only hiding the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Transparent thumb */
+}
+
+/* Container styles */
+
+
+/* Pre tag styles for displaying answer */
+pre {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: justify;
+  width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.loader {
+  --hue: 210;
+  --size: 50px;
+  --border: 5px;
+  --speed: 1s;
+  --blur: var(--border);
+}
+
+.loader {
+  width: var(--border);
+  aspect-ratio: 1;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  --y: calc((var(--size) * -0.5) + (var(--border) * 0.5));
+  transform: rotate(0deg) translateY(var(--y));
+  animation: spin var(--speed) infinite linear;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--border) * -0.5);
+  border-radius: 50%;
+  background: white;
+  filter: blur(var(--blur));
+  z-index: -1;
+}
+
+.loader::after {
+  content: "";
+  width: var(--size);
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  translate: -50% 0;
+  background: conic-gradient(
+    white,
+    hsl(var(--hue), 100%, 70%),
+    hsl(var(--hue), 100%, 10%),
+    transparent 65%
+  );
+  border-radius: 50%;
+  mask: radial-gradient(
+    transparent calc(((var(--size) * 0.5) - var(--border)) - 1px),
+    white calc((var(--size) * 0.5) - var(--border))
+  );
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(-360deg) translateY(var(--y));
+  }
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.ParaMain {
+  font-size: 16px; /* Default font size */
+}
+
+@media (max-width: 1200px) {
+  .ParaMain {
+    font-size: 15px; /* Font size for large screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .ParaMain {
+    font-size: 14px; /* Font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .ParaMain {
+    font-size: 13px; /* Font size for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .ParaMain {
+    font-size: 10px; /* Font size for extra small screens */
+  }
+}
+
+.CopyBtn {
+  background-color: #24527a;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  overflow: hidden;
+  transition-duration: 700ms;
+}
+
+.CopyBtn  span:first-child {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%)
+}
+
+.CopyBtn  span:last-child {
+  position: absolute;
+  color: #B5CCF3;
+  opacity: 0;
+  transform: translateY(100%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.CopyBtn :focus {
+  background-color: #0E418F;
+  width: 120px;
+  height: 40px;
+  transition-delay: 100ms;
+  transition-duration: 500ms;
+}
+
+.CopyBtn :focus span:first-child {
+  color: #B5CCF3;
+  transform: translateX(-50%) translateY(-150%);
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+.CopyBtn :focus span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition-delay: 300ms;
+  transition-duration: 500ms;
+}
+
+.CopyBtn :focus:end {
+  background-color: #FFFFFF;
+  width: 120px;
+  height: 40px;
+  transition-duration: 900ms;
+}
+
+.centralize {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+}
+
+
+
