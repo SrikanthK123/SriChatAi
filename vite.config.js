@@ -1,9 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import dotenv from 'dotenv'; // Import dotenv
-
-// Load environment variables from the .env file (optional, but recommended for security)
-dotenv.config();
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: 'build',  // Change the output directory to 'build'
   },
-  base: '/YogaLife/',
+  base: '/SriChatAi/',  // Correct base path to match your repository name
 });
